@@ -1,0 +1,16 @@
+{
+  "name": "zb-vue3-library",
+  "version": "1.0.0",
+  "description": "a vue3 components ui lib based Element-plus",
+  "private":true,
+  "scripts": {
+
+  },
+  "keywords": [
+    "zb-vue3-library",
+    "vue3",
+    "components ui",
+    "element plus"
+  ],
+  "author": "huanghu"
+}
