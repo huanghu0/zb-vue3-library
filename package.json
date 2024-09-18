@@ -2,15 +2,24 @@
   "name": "zb-vue3-library",
   "version": "1.0.0",
   "description": "a vue3 components ui lib based Element-plus",
-  "private":true,
-  "scripts": {
-
-  },
+  "private": true,
+  "scripts": {},
   "keywords": [
     "zb-vue3-library",
     "vue3",
     "components ui",
     "element plus"
   ],
-  "author": "huanghu"
+  "author": "huanghu",
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.8.3",
+    "vue": "^3.5.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "lodash": "^4.17.21",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.6"
+  }
 }
