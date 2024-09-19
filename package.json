@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "build": "node build/index.js"
   },
   "keywords": [
     "zb-vue3-library",
@@ -22,13 +23,17 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
+    "child_process": "^1.0.2",
     "eslint": "^9.10.0",
     "eslint-plugin-vue": "^9.28.0",
+    "fs-extra": "^11.2.0",
     "globals": "^15.9.0",
     "lodash": "^4.17.21",
+    "path": "^0.12.7",
     "sass": "^1.79.1",
     "typescript": "^5.6.2",
     "typescript-eslint": "^8.6.0",
-    "vite": "^5.4.6"
+    "vite": "^5.4.6",
+    "vite-plugin-dts": "^4.2.1"
   }
 }
