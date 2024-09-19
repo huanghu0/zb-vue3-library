@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 import { reactive, ref } from "vue"
-import { ListTable,SearchForm } from "zb-vue3-ui"
+// import { ListTable,SearchForm } from "zb-vue3-ui"
 import type { SearchItem,PageOptionItem,ColumnItem } from "zb-vue3-ui"
 import { SearchList, SearchParam, PageOption, TableList } from './config/index'
 import { getUuid } from './utils/index'
