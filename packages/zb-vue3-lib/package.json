@@ -1,0 +1,21 @@
+{
+  "name": "zb-vue3-ui",
+  "version": "1.0.0",
+  "description": "a components ui lib based on element-plus",
+  "main": "index.js",
+  "keywords": [
+    "vue3",
+    "components ui",
+    "element plus"
+  ],
+  "author": "huanghu",
+  "license": "MIT",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huanghu0/zb-vue3-library.git"
+  },
+  "bugs": {
+    "url": ""
+  }
+}
