@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "a components ui lib based on element-plus",
   "main": "index.js",
+  "peerDependencies": {
+    "element-plus": "^2.8.3",
+    "vue": "^3.5.6"
+  },
+  
   "keywords": [
     "vue3",
     "components ui",
@@ -10,12 +15,12 @@
   ],
   "author": "huanghu",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/huanghu0/zb-vue3-library/tree/main/packages/zb-vue3-lib",
   "repository": {
     "type": "git",
     "url": "https://github.com/huanghu0/zb-vue3-library.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/huanghu0/zb-vue3-library/issues"
   }
 }

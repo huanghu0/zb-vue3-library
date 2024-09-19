@@ -1,5 +1,5 @@
 {
-  "name": "components",
+  "name": "@zb-vue3-ui/components",
   "version": "1.0.0",
   "description": "the core code for the project",
   "main": "index.ts",

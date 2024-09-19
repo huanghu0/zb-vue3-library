@@ -66,7 +66,6 @@
             v-model:current-page="pageOption.pageNo"
             v-model:page-size="pageOption.pageSize"
             :page-sizes="[10, 20, 30, 50, 100]"
-            size="small"
             background
             layout="total, sizes, prev, pager, next, jumper"
             :total="pageOption.total"

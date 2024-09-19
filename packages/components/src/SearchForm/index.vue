@@ -120,7 +120,7 @@ import type { ObjectType } from '../../types/ObjecType'
 import type { OptionItem, SearchItem } from '../../types/itemInterface'
 import type { FormInstance } from 'element-plus'
 import { onMounted, onUnmounted, onUpdated, ref, watch } from 'vue'
-import { QuestionFilled } from '@element-plus/icons-vue'
+import { QuestionFilled,CaretTop,CaretBottom } from '@element-plus/icons-vue'
 import { ElButton,ElForm,ElFormItem,ElTooltip,ElIcon,ElSelect,ElOption,ElInput,ElDatePicker,ElCascader } from 'element-plus';
 
 
