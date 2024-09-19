@@ -75,7 +75,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script name="ListTable" lang="ts" setup>
 import { nextTick, onMounted, onUnmounted, onUpdated, ref, watch } from 'vue'
 import type { ObjectType } from '../../types/ObjecType'
 import type { ColumnItem, Ifn } from '../../types/itemInterface'

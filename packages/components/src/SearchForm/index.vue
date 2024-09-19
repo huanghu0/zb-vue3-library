@@ -114,7 +114,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script name="SearchForm" lang="ts" setup>
 import { cloneDeep } from 'lodash'
 import type { ObjectType } from '../../types/ObjecType'
 import type { OptionItem, SearchItem } from '../../types/itemInterface'

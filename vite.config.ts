@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
-
+import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 
 export default defineConfig({
-plugins: [vue(),dts({ outDir: ['packages/zb-vue3-lib/es/packages/components', 'packages/zb-vue3-lib/lib/packages/components'] })],
+plugins: [vue(),VueSetupExtend(),dts({ outDir: ['packages/zb-vue3-lib/es/packages/components', 'packages/zb-vue3-lib/lib/packages/components'] })],
    build:{
         rollupOptions: {
             external: ['vue', 'element-plus'],

@@ -1,8 +1,10 @@
-import { defineComponent as P, ref as w, onMounted as R, onUpdated as V, onUnmounted as _, watch as F, nextTick as U, resolveComponent as j, resolveDirective as I, openBlock as l, createElementBlock as m, normalizeStyle as K, withDirectives as W, createBlock as r, unref as d, withCtx as i, createCommentVNode as f, Fragment as q, renderList as Q, createSlots as A, createTextVNode as G, toDisplayString as J, createVNode as v, createElementVNode as C, resolveDynamicComponent as X, renderSlot as k } from "vue";
+import { defineComponent as T, ref as w, onMounted as P, onUpdated as R, onUnmounted as V, watch as F, nextTick as U, resolveComponent as j, resolveDirective as I, openBlock as l, createElementBlock as m, normalizeStyle as K, withDirectives as W, createBlock as r, unref as d, withCtx as i, createCommentVNode as f, Fragment as q, renderList as Q, createSlots as A, createTextVNode as G, toDisplayString as J, createVNode as v, createElementVNode as C, resolveDynamicComponent as X, renderSlot as k } from "vue";
 import { QuestionFilled as Y } from "../../../../node_modules/.pnpm/@element-plus_icons-vue@2.3.1_vue@3.5.6_typescript@5.6.2_/node_modules/@element-plus/icons-vue/dist/index.mjs";
 import { ElTable as Z, ElTableColumn as b, ElIcon as ee, ElPagination as te } from "element-plus";
-const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le = ["innerHTML", "onClick"], se = /* @__PURE__ */ P({
-  __name: "index",
+const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le = ["innerHTML", "onClick"], ie = T({
+  name: "ListTable"
+}), pe = /* @__PURE__ */ T({
+  ...ie,
   props: {
     tableOption: { default: () => ({
       multiple: !1,
@@ -24,30 +26,30 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
     loading: { type: Boolean, default: !1 }
   },
   emits: ["handleSizeChange", "handleCurrentChange", "handleSelectionChange", "handleSortChange"],
-  setup(T, { expose: x, emit: H }) {
-    const p = H, c = w(), y = w(500), h = w([]);
-    R(() => {
-      u(), window.addEventListener("resize", u, { passive: !0 });
+  setup(H, { expose: x, emit: z }) {
+    const p = z, c = w(), y = w(500), u = w([]);
+    P(() => {
+      h(), window.addEventListener("resize", h, { passive: !0 });
+    }), R(() => {
+      h();
     }), V(() => {
-      u();
-    }), _(() => {
-      window.removeEventListener("resize", u);
+      window.removeEventListener("resize", h);
     });
-    const n = T, S = (e, o) => e(o), u = () => {
+    const n = H, S = (e, o) => e(o), h = () => {
       var o, s, g;
       let e = 0;
       (o = n == null ? void 0 : n.tableOption) != null && o.maxHeight ? e = (s = n == null ? void 0 : n.tableOption) == null ? void 0 : s.maxHeight : (e = window.innerHeight - (n.tableOption.hasPagination ? 147 : 80) - (((g = n.tableOption) == null ? void 0 : g.extraHeight) ?? 0), e = Math.max(e, 300)), y.value = e;
-    }, z = (e) => {
-      p("handleSizeChange", e);
     }, L = (e) => {
-      p("handleCurrentChange", e);
+      p("handleSizeChange", e);
     }, M = (e) => {
-      p("handleSelectionChange", e);
+      p("handleCurrentChange", e);
     }, D = (e) => {
-      p("handleSortChange", e);
+      p("handleSelectionChange", e);
     }, E = (e) => {
+      p("handleSortChange", e);
+    }, N = (e) => {
       c.value.toggleRowSelection(e, !0);
-    }, N = () => {
+    }, _ = () => {
       c.value.clearSelection();
     };
     function $(e) {
@@ -57,18 +59,18 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
       () => n.tableData,
       async (e, o) => {
         if (o == e) {
-          h.value = n.tableData;
+          u.value = n.tableData;
           return;
         }
-        h.value = [], await U(), h.value = n.tableData;
+        u.value = [], await U(), u.value = n.tableData;
       },
       {
         immediate: !0,
         deep: !0
       }
     ), x({
-      toggleRowSelection: E,
-      clearSelection: N
+      toggleRowSelection: N,
+      clearSelection: _
     }), (e, o) => {
       var O;
       const s = j("el-tooltip"), g = I("loading");
@@ -77,14 +79,14 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
         style: K(n.styleObject)
       }, [
         W((l(), r(d(Z), {
-          data: h.value,
+          data: u.value,
           style: { width: "100%" },
           "header-cell-style": ((O = n.tableOption) == null ? void 0 : O.headerCellStyle) ?? { color: "#555" },
           "max-height": y.value,
           ref_key: "tableRef",
           ref: c,
-          onSelectionChange: M,
-          onSortChange: D,
+          onSelectionChange: D,
+          onSortChange: E,
           key: e.tableKey,
           "show-header": n.showHeader,
           "row-key": e.tableOption.rowKey,
@@ -220,13 +222,13 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
           background: "",
           layout: "total, sizes, prev, pager, next, jumper",
           total: e.pageOption.total,
-          onSizeChange: z,
-          onCurrentChange: L
+          onSizeChange: L,
+          onCurrentChange: M
         }, null, 8, ["current-page", "page-size", "total"])) : f("", !0)
       ], 4);
     };
   }
 });
 export {
-  se as default
+  pe as default
 };
