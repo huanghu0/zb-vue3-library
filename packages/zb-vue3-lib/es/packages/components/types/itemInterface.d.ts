@@ -58,3 +58,16 @@ export interface PageOptionItem {
 export interface Ifn {
     (row: any): any;
 }
+export interface TableOption {
+    multiple?: boolean;
+    index?: boolean;
+    operateWidth?: string;
+    hasPagination?: boolean;
+    maxHeight?: number;
+    extraHeight?: number;
+    fixed?: string | boolean;
+    headerCellStyle?: any;
+    rowKey?: number | string;
+    reserveSelection?: boolean;
+    border?: boolean;
+}

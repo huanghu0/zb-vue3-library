@@ -62,3 +62,17 @@ export interface PageOptionItem {
 export interface Ifn {
     (row: any): any
 }
+
+export interface TableOption {
+    multiple?: boolean // 是否多选,暂时没加
+    index?: boolean // 是否显示序号
+    operateWidth?: string // 操作列宽度，有值就说明有操作列
+    hasPagination?: boolean // 是否展示pagination
+    maxHeight?: number // 是否有手动传的列表最大高度
+    extraHeight?: number // 自动计算列表最大高度时，除了header以外要额外去除的距离
+    fixed?: string | boolean
+    headerCellStyle?: any
+    rowKey?:number | string // 行数据的 Key，用来优化 Table 的渲染；
+    reserveSelection?: boolean // 多选是否保留当前的选中项
+    border?:boolean // 是否带有边框
+}
