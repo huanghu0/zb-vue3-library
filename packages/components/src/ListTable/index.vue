@@ -75,7 +75,7 @@
     </div>
 </template>
 
-<script name="ListTable" lang="ts" setup>
+<script name="ZbListTable" lang="ts" setup>
 import { nextTick, onMounted, onUnmounted, onUpdated, ref, watch } from 'vue'
 import type { ObjectType } from '../../types/ObjecType'
 import type { ColumnItem, Ifn,TableOption } from '../../types/itemInterface'

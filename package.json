@@ -6,7 +6,10 @@
   "scripts": {
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "build": "node build/index.js"
+    "build": "node build/index.js",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "keywords": [
     "zb-vue3-library",
@@ -19,6 +22,7 @@
     "@element-plus/icons-vue": "^2.3.1",
     "@zb-vue3-ui/components": "workspace:*",
     "element-plus": "^2.8.3",
+    "vitepress": "^1.3.4",
     "vue": "^3.5.6",
     "zb-vue3-ui": "workspace:*"
   },

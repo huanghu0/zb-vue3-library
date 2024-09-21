@@ -1,8 +1,8 @@
-import { ListTable } from './src/ListTable'
-import { SearchForm } from './src/SearchForm'
+import { ZbListTable } from './src/ListTable'
+import { ZbSearchForm } from './src/SearchForm'
 import type { App } from '@vue/runtime-core'
 
-const components = [ListTable,SearchForm]
+const components = [ZbListTable,ZbSearchForm]
 
 const makeInstaller = (comments:any) => {
     const install = (app:App,options?:any) => {

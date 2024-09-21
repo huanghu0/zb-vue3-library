@@ -7,10 +7,10 @@ const e = [l, s], r = (n) => ({
       o.component(a, t);
     });
   }
-}), m = r(e), b = m.install;
+}), m = r(e), f = m.install;
 export {
-  l as ListTable,
-  s as SearchForm,
-  b as ZbUiInstall,
+  l as ZbListTable,
+  s as ZbSearchForm,
+  f as ZbUiInstall,
   m as default
 };

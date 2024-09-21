@@ -1,1 +1,1 @@
-export { default as SearchForm } from './index.vue'
+export { default as ZbSearchForm } from './index.vue'

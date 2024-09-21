@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SearchForm
+    <ZbSearchForm
         :searchList="searchList"
         :searchParam="searchParam"
         @search="search"
@@ -9,9 +9,14 @@
         :searchBtnTxt="'查看'"
         :formStyleObject="'padding-left:0px;padding-right:0px'"
         :buttonStyleObject="'margin:0px;margin-bottom:10px'"
-    ></SearchForm>
+    >
+      <!-- 测试添加功能按钮 -->
+      <template #funcButton>
+        <el-button>你好</el-button>
+      </template>  
+    </ZbSearchForm>
 
-    <ListTable
+    <ZbListTable
         :tableList="tableList"
         :tableData="tableData"
         :tableOption="tableOption"
@@ -28,7 +33,7 @@
         <template #operate="{ data }">
             <el-link :underline="false" type="primary" style="margin-right: 5px" @click="openDetailDataSet(data.id)">详情</el-link>
         </template>
-    </ListTable>     
+    </ZbListTable>     
 
   </div>
 

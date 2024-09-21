@@ -1,1 +1,1 @@
-export { default as ListTable } from './index.vue';
+export { default as ZbListTable } from './index.vue';

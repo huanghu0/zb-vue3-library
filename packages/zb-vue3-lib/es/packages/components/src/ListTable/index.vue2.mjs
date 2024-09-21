@@ -1,8 +1,8 @@
-import { defineComponent as T, ref as w, onMounted as P, onUpdated as R, onUnmounted as V, watch as F, nextTick as U, resolveComponent as j, resolveDirective as I, openBlock as l, createElementBlock as m, normalizeStyle as K, withDirectives as W, createBlock as r, unref as d, withCtx as i, createCommentVNode as f, Fragment as q, renderList as Q, createSlots as A, createTextVNode as G, toDisplayString as J, createVNode as v, createElementVNode as C, resolveDynamicComponent as X, renderSlot as k } from "vue";
-import { QuestionFilled as Y } from "../../../../node_modules/.pnpm/@element-plus_icons-vue@2.3.1_vue@3.5.6_typescript@5.6.2_/node_modules/@element-plus/icons-vue/dist/index.mjs";
-import { ElTable as Z, ElTableColumn as b, ElIcon as ee, ElPagination as te } from "element-plus";
+import { defineComponent as T, ref as w, onMounted as P, onUpdated as R, onUnmounted as V, watch as F, nextTick as U, resolveComponent as j, resolveDirective as I, openBlock as l, createElementBlock as m, normalizeStyle as K, withDirectives as W, createBlock as r, unref as d, withCtx as i, createCommentVNode as f, Fragment as q, renderList as Q, createSlots as Z, createTextVNode as A, toDisplayString as G, createVNode as v, createElementVNode as C, resolveDynamicComponent as J, renderSlot as k } from "vue";
+import { QuestionFilled as X } from "../../../../node_modules/.pnpm/@element-plus_icons-vue@2.3.1_vue@3.5.6_typescript@5.6.2_/node_modules/@element-plus/icons-vue/dist/index.mjs";
+import { ElTable as Y, ElTableColumn as b, ElIcon as ee, ElPagination as te } from "element-plus";
 const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le = ["innerHTML", "onClick"], ie = T({
-  name: "ListTable"
+  name: "ZbListTable"
 }), pe = /* @__PURE__ */ T({
   ...ie,
   props: {
@@ -78,7 +78,7 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
         class: "list-table",
         style: K(n.styleObject)
       }, [
-        W((l(), r(d(Z), {
+        W((l(), r(d(Y), {
           data: u.value,
           style: { width: "100%" },
           "header-cell-style": ((O = n.tableOption) == null ? void 0 : O.headerCellStyle) ?? { color: "#555" },
@@ -117,11 +117,11 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
               "show-overflow-tooltip": t.tooltip,
               fixed: t.fixed,
               sortable: t.sortable ?? !1
-            }, A({ _: 2 }, [
+            }, Z({ _: 2 }, [
               t.headerToolTip ? {
                 name: "header",
                 fn: i(() => [
-                  G(J(t.label) + " ", 1),
+                  A(G(t.label) + " ", 1),
                   v(s, { placement: "top" }, {
                     content: i(() => [
                       C("div", {
@@ -131,7 +131,7 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
                     default: i(() => [
                       v(d(ee), { size: "14" }, {
                         default: i(() => [
-                          v(d(Y))
+                          v(d(X))
                         ]),
                         _: 1
                       })
@@ -172,7 +172,7 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
               t.vueComponent ? {
                 name: "default",
                 fn: i((a) => [
-                  (l(), r(X(t.vueComponent), {
+                  (l(), r(J(t.vueComponent), {
                     data: a.row,
                     field: a.column,
                     index: a.$index
