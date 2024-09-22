@@ -42,11 +42,11 @@ export default defineConfig({
       md.use(componentPreview)
     }
   },  
-  // vite: {
-  //   resolve: {
-  //     alias: {
-  //       'zb-vue3-ui': '../../packages/components'
-  //     }
-  //   }
-  // }
+  vite: {
+    resolve: {
+      alias: {
+        'zb-vue3-ui': '../../packages/components'
+      }
+    }
+  }
 })

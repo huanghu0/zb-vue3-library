@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 import { reactive, ref } from "vue"
-import type { SearchItem,PageOptionItem,ColumnItem } from "zb-vue3-ui"
+import type { PageOptionItem,ColumnItem } from "zb-vue3-ui"
 // getUUid
 function getUuid() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
