@@ -1,4 +1,8 @@
 import { defineConfig } from 'vitepress'
+import {
+  containerPreview,
+  componentPreview
+} from '@vitepress-demo-preview/plugin'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -32,4 +36,17 @@ export default defineConfig({
     ]
   },
   base: '/zb-vue3-library/',
+  markdown: {
+    config(md) {
+      md.use(containerPreview)
+      md.use(componentPreview)
+    }
+  },  
+  // vite: {
+  //   resolve: {
+  //     alias: {
+  //       'zb-vue3-ui': '../../packages/components'
+  //     }
+  //   }
+  // }
 })
