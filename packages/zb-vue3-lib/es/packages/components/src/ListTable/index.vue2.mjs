@@ -18,7 +18,8 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
     pageOption: { default: () => ({
       total: 0,
       pageSize: 20,
-      pageNo: 1
+      pageNo: 1,
+      pageSizes: [10, 20, 30, 50, 100]
     }) },
     styleObject: {},
     tableKey: { default: !0 },
@@ -26,8 +27,8 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
     loading: { type: Boolean, default: !1 }
   },
   emits: ["handleSizeChange", "handleCurrentChange", "handleSelectionChange", "handleSortChange"],
-  setup(H, { expose: x, emit: z }) {
-    const p = z, c = w(), y = w(500), u = w([]);
+  setup(z, { expose: H, emit: x }) {
+    const p = x, c = w(), y = w(500), u = w([]);
     P(() => {
       h(), window.addEventListener("resize", h, { passive: !0 });
     }), R(() => {
@@ -35,7 +36,7 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
     }), V(() => {
       window.removeEventListener("resize", h);
     });
-    const n = H, S = (e, o) => e(o), h = () => {
+    const n = z, S = (e, o) => e(o), h = () => {
       var o, s, g;
       let e = 0;
       (o = n == null ? void 0 : n.tableOption) != null && o.maxHeight ? e = (s = n == null ? void 0 : n.tableOption) == null ? void 0 : s.maxHeight : (e = window.innerHeight - (n.tableOption.hasPagination ? 147 : 80) - (((g = n.tableOption) == null ? void 0 : g.extraHeight) ?? 0), e = Math.max(e, 300)), y.value = e;
@@ -49,10 +50,10 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
       p("handleSortChange", e);
     }, N = (e) => {
       c.value.toggleRowSelection(e, !0);
-    }, _ = () => {
+    }, $ = () => {
       c.value.clearSelection();
     };
-    function $(e) {
+    function _(e) {
       return e + (n.pageOption.pageNo - 1) * n.pageOption.pageSize + 1;
     }
     return F(
@@ -68,9 +69,9 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
         immediate: !0,
         deep: !0
       }
-    ), x({
+    ), H({
       toggleRowSelection: N,
-      clearSelection: _
+      clearSelection: $
     }), (e, o) => {
       var O;
       const s = j("el-tooltip"), g = I("loading");
@@ -105,7 +106,7 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
               type: "index",
               width: "50",
               fixed: !0,
-              index: $
+              index: _
             })) : f("", !0),
             (l(!0), m(q, null, Q(e.tableList, (t) => (l(), r(d(b), {
               key: t.prop,
@@ -218,13 +219,13 @@ const ne = ["innerHTML"], ae = ["innerHTML", "onClick"], oe = ["innerHTML"], le 
           "onUpdate:currentPage": o[0] || (o[0] = (t) => e.pageOption.pageNo = t),
           "page-size": e.pageOption.pageSize,
           "onUpdate:pageSize": o[1] || (o[1] = (t) => e.pageOption.pageSize = t),
-          "page-sizes": [10, 20, 30, 50, 100],
+          "page-sizes": e.pageOption.pageSizes,
           background: "",
           layout: "total, sizes, prev, pager, next, jumper",
           total: e.pageOption.total,
           onSizeChange: L,
           onCurrentChange: M
-        }, null, 8, ["current-page", "page-size", "total"])) : f("", !0)
+        }, null, 8, ["current-page", "page-size", "page-sizes", "total"])) : f("", !0)
       ], 4);
     };
   }

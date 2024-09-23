@@ -65,7 +65,7 @@
             v-if="tableOption.hasPagination"
             v-model:current-page="pageOption.pageNo"
             v-model:page-size="pageOption.pageSize"
-            :page-sizes="[10, 20, 30, 50, 100]"
+            :page-sizes="pageOption.pageSizes"
             background
             layout="total, sizes, prev, pager, next, jumper"
             :total="pageOption.total"
@@ -78,7 +78,7 @@
 <script name="ZbListTable" lang="ts" setup>
 import { nextTick, onMounted, onUnmounted, onUpdated, ref, watch } from 'vue'
 import type { ObjectType } from '../../types/ObjecType'
-import type { ColumnItem, Ifn,TableOption } from '../../types/itemInterface'
+import type { ColumnItem, Ifn,TableOption,PageOptionItem } from '../../types/itemInterface'
 import { QuestionFilled } from '@element-plus/icons-vue'
 import { ElTable,ElTableColumn,ElIcon,ElPagination } from 'element-plus'
 
@@ -93,9 +93,7 @@ interface Props {
     tableOption: TableOption // 列表配置
     tableData: ObjectType[] // 列表数据
     tableList: ColumnItem[] // 列表展示内容
-    pageOption: {
-        [propName: string]: number | undefined
-    } // 翻页配置
+    pageOption: PageOptionItem// 翻页配置
     styleObject?: string //自定义样式
     tableKey?: any // 解决table数据缓存问题
     showHeader?: boolean
@@ -128,7 +126,8 @@ const props = withDefaults(defineProps<Props>(), {
     pageOption: () => ({
         total: 0,
         pageSize: 20,
-        pageNo: 1
+        pageNo: 1,
+        pageSizes:[10, 20, 30, 50, 100]
     }),
     tableKey: true,
     showHeader: true,

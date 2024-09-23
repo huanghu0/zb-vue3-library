@@ -56,7 +56,8 @@ export interface SearchItem {
 export interface PageOptionItem {
     total: number
     pageSize: number
-    pageNo: number
+    pageNo: number,
+    pageSizes: Array<number>
 }
 
 export interface Ifn {

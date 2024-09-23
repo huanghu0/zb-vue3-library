@@ -31,7 +31,8 @@ export const SearchParam = {
 export const PageOption = {
     total: 0,
     pageSize: 10,
-    pageNo: 1
+    pageNo: 1,
+    pageSizes:[10,100,1000]
 }
 
 export const TableList = [

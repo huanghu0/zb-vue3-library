@@ -1,7 +1,7 @@
 import o from "./index.vue2.mjs";
 /* empty css            */
 import t from "../../../../_virtual/_plugin-vue_export-helper.mjs";
-const m = /* @__PURE__ */ t(o, [["__scopeId", "data-v-e0d5d370"]]);
+const p = /* @__PURE__ */ t(o, [["__scopeId", "data-v-16c9681d"]]);
 export {
-  m as default
+  p as default
 };
