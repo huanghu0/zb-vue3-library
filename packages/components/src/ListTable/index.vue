@@ -15,7 +15,7 @@
             :border="tableOption.border"
         >
             <el-table-column type="selection" width="60" v-if="tableOption.multiple" :reserve-selection="tableOption.reserveSelection" :fixed="true" />
-            <el-table-column type="index" width="50" v-if="tableOption.index" :fixed="true" :index="indexMethod" />
+            <el-table-column type="index" :width="tableOption.indexWidth" v-if="tableOption.index" :label="tableOption.indexLabel" :fixed="true" :index="tableOption.indexMethod ? tableOption.indexMethod : ''" />
             <el-table-column
                 v-for="item in tableList"
                 :key="item.prop"
@@ -172,10 +172,6 @@ const toggleRowSelection = (row: ObjectType) => {
 // 清理表格勾选
 const clearSelection = () => {
     ;(tableRef.value as any).clearSelection()
-}
-
-function indexMethod(index: number) {
-    return index + (props.pageOption.pageNo! - 1) * props.pageOption.pageSize! + 1
 }
 
 watch(

@@ -38,7 +38,8 @@ function getUuid() {
 const PageOption = {
     total: 0,
     pageSize: 10,
-    pageNo: 1
+    pageNo: 1,
+    pageSizes:[10,20]
 }
 
 const TableList = [

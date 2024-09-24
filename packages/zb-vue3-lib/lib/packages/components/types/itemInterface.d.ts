@@ -71,4 +71,7 @@ export interface TableOption {
     rowKey?: number | string;
     reserveSelection?: boolean;
     border?: boolean;
+    indexMethod?: Function;
+    indexLabel?: string;
+    indexWidth?: string;
 }

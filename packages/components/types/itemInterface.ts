@@ -76,4 +76,7 @@ export interface TableOption {
     rowKey?:number | string // 行数据的 Key，用来优化 Table 的渲染；
     reserveSelection?: boolean // 多选是否保留当前的选中项
     border?:boolean // 是否带有边框
+    indexMethod?:Function // 自定义索引方法,需要index为true
+    indexLabel?:string // 索引列的label,需要index为true
+    indexWidth?:string // 索引列的宽度,需要index为true
 }
