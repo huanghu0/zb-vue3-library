@@ -79,7 +79,7 @@ const tableData = ref([{}])
 
 // 表格组件相关
 const tableOption = reactive({
-    index: false,
+    index: true,
     operateWidth: '100px',
     hasPagination: true,
     multiple: true,
@@ -90,8 +90,16 @@ const tableOption = reactive({
     headerCellStyle:{
       background: '#EAEAEA',
       color: 'rgba(13, 13, 13, 1)'
-    }
+    },
+    indexLabel:'序号',
+    indexWidth:'80px',
+    indexMethod:indexMethod
 })
+
+function indexMethod(index:number){
+  console.log(index,'index------------------')
+  return index
+}
 
 const loading = ref(false)
 
