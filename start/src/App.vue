@@ -72,8 +72,14 @@ const tableOption = reactive({
       color: 'rgba(13, 13, 13, 1)'
     },
     indexLabel:'序号',
-    indexWidth:'80px'
+    indexWidth:'80px',
+    indexMethod:indexMethod
 })
+
+function indexMethod(index:number){
+  console.log(index,'index------------------')
+  return index
+}
 
 const loading = ref(false)
 
