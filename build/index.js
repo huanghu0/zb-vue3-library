@@ -5,7 +5,6 @@ const { spawn } = require('child_process')
 const root = path.resolve(__dirname, '..')
 const esPath = path.resolve(root, 'packages/zb-vue3-lib/es')
 const libPath = path.resolve(root, 'packages/zb-vue3-lib/lib')
-console.log(root)
 const main = async () => {
     // console.log(esPath,libPath,fs.existsSync(esPath),fs.existsSync(libPath))
   if (fs.existsSync(esPath)) {
