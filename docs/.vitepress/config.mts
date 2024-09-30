@@ -26,7 +26,8 @@ export default defineConfig({
         text:'组件',
         items:[
           { text:'列表',link:'/components/ZbListTable' },
-          { text:'搜索表单', link:'/components/ZbSearchForm' }
+          { text:'搜索表单', link:'/components/ZbSearchForm' },
+          { text:'svg图标',link:'/components/ZbSvgIcon' }
         ]
       }
     ],

@@ -1,8 +1,9 @@
 import { ZbListTable } from './src/ListTable'
 import { ZbSearchForm } from './src/SearchForm'
+import { ZbSvgIcon } from './src/SvgIcon'
 import type { App } from '@vue/runtime-core'
 
-const components = [ZbListTable,ZbSearchForm]
+const components = [ZbListTable,ZbSearchForm,ZbSvgIcon]
 
 const makeInstaller = (comments:any) => {
     const install = (app:App,options?:any) => {
@@ -22,6 +23,7 @@ export const ZbUiInstall = installer.install
 
 export * from './src/ListTable'
 export * from './src/SearchForm'
+export * from './src/SvgIcon'
 export * from './types/index'
 
 export default installer
