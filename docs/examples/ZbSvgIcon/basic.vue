@@ -6,6 +6,18 @@
       :iconStr="iconStr"
     >
     </ZbSvgIcon>  
+    <ZbSvgIcon
+      size="20px"
+      color="#ff5600"
+      :iconStr="iconStr"
+    >    
+    </ZbSvgIcon>
+    <ZbSvgIcon
+      :size="20"
+      color="#ff5600"
+      :iconStr="iconStr"
+    >    
+    </ZbSvgIcon>        
 
   </div>
 
