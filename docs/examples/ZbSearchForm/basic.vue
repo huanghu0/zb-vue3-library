@@ -32,8 +32,8 @@ const SearchList = [
         placeholder: '请输入'
     },
     {
-        label: '数据集名称',
-        prop: 'dataSetName',
+        label: '名称',
+        prop: 'name',
         type: 'el-input',
         placeholder: '请输入'
     },
@@ -50,7 +50,7 @@ const SearchList = [
 
 const SearchParam = {
     id: '',
-    dataSetName: '',
+    name: '',
     type: ''
 }
 
@@ -59,10 +59,15 @@ const searchList = ref<SearchItem[]>(SearchList)
 const searchParam:any = ref(SearchParam)
 
 function search(){
-
+  console.log('search')
 }
 
 function reset(){
+  searchParam.value = {
+    id: '',
+    name: '',
+    type: ''    
+  }
 }
 
 

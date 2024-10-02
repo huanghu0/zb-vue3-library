@@ -14,16 +14,16 @@ demo-preview=../examples/ZbListTable/basic.vue
 
 ### Props参数
 
-| 参数名         | 说明                    | 是否必填 | 参数类型            | 默认值                                                                                           |
-| ----------- | --------------------- | ---- | --------------- | --------------------------------------------------------------------------------------------- |
-| tableOption | 表格配置                  | 是    | TableOption     |                                                                                               |
-| tableData   | 表格数据                  | 是    | obj[]           | []                                                                                            |
-| tableList   | 表格每列渲染配置              | 是    | ColumnItem[]    | []                                                                                            |
-| pageOption  | 分页配置                  | 是    | PageOptionItem  | { total: 0,      pageSize:20,     pageNo: 1,           pageSizes:[10, 20, 30, 50, 100]     }, |
-| styleObject | 包裹表格元素样式              | 否    | string          | -                                                                                             |
-| showHeader  | 是否展示表头                | 否    | boolean         | true                                                                                          |
-| loading     | 请求表格数据时动态loading      | 否    | boolean         | false                                                                                         |
-| tableKey    | 表格的key,元数据更新了用于重新渲染表格 | 否    | any,一般是生产的随机字符串 | -                                                                                             |
+| 参数名         | 说明                    | 是否必填 | 参数类型               | 默认值                                                                                           |
+| ----------- | --------------------- | ---- | ------------------ | --------------------------------------------------------------------------------------------- |
+| tableOption | 表格配置                  | 是    | TableOption,见下方    |                                                                                               |
+| tableData   | 表格数据                  | 是    | obj[]              | []                                                                                            |
+| tableList   | 表格每列渲染配置              | 是    | ColumnItem[],见下方   | []                                                                                            |
+| pageOption  | 分页配置                  | 是    | PageOptionItem,见下方 | { total: 0,      pageSize:20,     pageNo: 1,           pageSizes:[10, 20, 30, 50, 100]     }, |
+| styleObject | 包裹表格元素样式              | 否    | string             | -                                                                                             |
+| showHeader  | 是否展示表头                | 否    | boolean            | true                                                                                          |
+| loading     | 请求表格数据时动态loading      | 否    | boolean            | false                                                                                         |
+| tableKey    | 表格的key,元数据更新了用于重新渲染表格 | 否    | any,一般是生产的随机字符串    | -                                                                                             |
 
 #### TableOption类型说明
 
