@@ -61,17 +61,19 @@
                 </template>
             </el-table-column>
         </el-table>
-        <el-pagination
-            v-if="tableOption.hasPagination"
-            v-model:current-page="pageOption.pageNo"
-            v-model:page-size="pageOption.pageSize"
-            :page-sizes="pageOption.pageSizes"
-            background
-            layout="total, sizes, prev, pager, next, jumper"
-            :total="pageOption.total"
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-        ></el-pagination>
+        <div :style="pageOption.paginationContainerStyle">
+            <el-pagination
+                v-if="tableOption.hasPagination"
+                v-model:current-page="pageOption.pageNo"
+                v-model:page-size="pageOption.pageSize"
+                :page-sizes="pageOption.pageSizes"
+                background
+                :layout="pageOption.layout"
+                :total="pageOption.total"
+                @size-change="handleSizeChange"
+                @current-change="handleCurrentChange"
+            ></el-pagination>            
+        </div>
     </div>
 </template>
 
@@ -127,7 +129,9 @@ const props = withDefaults(defineProps<Props>(), {
         total: 0,
         pageSize: 20,
         pageNo: 1,
-        pageSizes:[10, 20, 30, 50, 100]
+        pageSizes:[10, 20, 30, 50, 100],
+        layout:'total, sizes, prev, pager, next, jumper',
+        paginationContainerStyle:''
     }),
     tableKey: true,
     showHeader: true,

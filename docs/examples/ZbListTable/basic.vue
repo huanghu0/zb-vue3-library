@@ -39,7 +39,9 @@ const PageOption = {
     total: 0,
     pageSize: 10,
     pageNo: 1,
-    pageSizes:[10,20]
+    pageSizes:[10,20],
+    layout:'total, sizes, prev, pager, next, jumper',
+    paginationContainerStyle:'margin-top: 15px; display: flex; justify-content: center'    
 }
 
 const TableList = [

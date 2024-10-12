@@ -55,6 +55,8 @@ export interface PageOptionItem {
     pageSize: number;
     pageNo: number;
     pageSizes: Array<number>;
+    layout: string;
+    paginationContainerStyle: string | object;
 }
 export interface Ifn {
     (row: any): any;

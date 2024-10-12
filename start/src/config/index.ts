@@ -32,7 +32,13 @@ export const PageOption = {
     total: 0,
     pageSize: 10,
     pageNo: 1,
-    pageSizes:[10,100,1000]
+    pageSizes:[10,100,1000],
+    layout:'total, prev, pager, next,sizes',
+    paginationContainerStyle:{
+        'margin-top': '15px',
+        'display': 'flex',
+        'justify-content': 'center'
+    }      
 }
 
 export const TableList = [

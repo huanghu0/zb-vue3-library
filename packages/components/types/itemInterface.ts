@@ -57,7 +57,9 @@ export interface PageOptionItem {
     total: number
     pageSize: number
     pageNo: number,
-    pageSizes: Array<number>
+    pageSizes: Array<number>,
+    layout: string,
+    paginationContainerStyle:string | object
 }
 
 export interface Ifn {
