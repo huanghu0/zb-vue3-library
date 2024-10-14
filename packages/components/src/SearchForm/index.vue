@@ -116,7 +116,7 @@
 
 <script name="ZbSearchForm" lang="ts" setup>
 import { cloneDeep } from 'lodash'
-import type { ObjectType } from '../../types/ObjecType'
+import type { ObjectType } from '../../types/ObjectType'
 import type { OptionItem, SearchItem } from '../../types/itemInterface'
 import type { FormInstance } from 'element-plus'
 import { onMounted, onUnmounted, onUpdated, ref, watch } from 'vue'

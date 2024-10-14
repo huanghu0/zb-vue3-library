@@ -1,2 +1,2 @@
-export * from './ObjecType';
+export * from './ObjectType';
 export * from './itemInterface';

@@ -79,7 +79,7 @@
 
 <script name="ZbListTable" lang="ts" setup>
 import { nextTick, onMounted, onUnmounted, onUpdated, ref, watch } from 'vue'
-import type { ObjectType } from '../../types/ObjecType'
+import type { ObjectType } from '../../types/ObjectType'
 import type { ColumnItem, Ifn,TableOption,PageOptionItem } from '../../types/itemInterface'
 import { QuestionFilled } from '@element-plus/icons-vue'
 import { ElTable,ElTableColumn,ElIcon,ElPagination } from 'element-plus'

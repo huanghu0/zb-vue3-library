@@ -1,4 +1,4 @@
-import { ObjectType } from '../../types/ObjecType';
+import { ObjectType } from '../../types/ObjectType';
 import { OptionItem, SearchItem } from '../../types/itemInterface';
 interface Props {
     searchList: SearchItem[];
