@@ -50,7 +50,8 @@ export interface SearchItem {
     filterMethod?: any //自定义搜索函数
     clearable?: boolean
     format?: string // 时间类型展示样式
-    valueFormat?: string // 时间对应值的展示样式
+    valueFormat?: string, // 时间对应值的展示样式
+    cascaderProps:any, // 级联类型的props
 }
 
 export interface PageOptionItem {

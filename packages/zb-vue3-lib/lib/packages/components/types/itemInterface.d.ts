@@ -49,6 +49,7 @@ export interface SearchItem {
     clearable?: boolean;
     format?: string;
     valueFormat?: string;
+    cascaderProps: any;
 }
 export interface PageOptionItem {
     total: number;

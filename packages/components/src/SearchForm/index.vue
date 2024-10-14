@@ -88,8 +88,7 @@
                         :placeholder="item.placeholder"
                         :options="item.options"
                         :props="{
-                            multiple: Boolean(item.multiple),
-                            checkStrictly: Boolean(item.checkStrictly)
+                            ...item.cascaderProps,
                         }"
                         :filterable="item.filterable"
                         :style="{ width: item.width ? item.width : '200px' }"
