@@ -8,7 +8,7 @@ plugins: [vue(),VueSetupExtend(),dts({ outDir: ['packages/zb-vue3-lib/es/package
    build:{
         rollupOptions: {
             external: ['vue', 'element-plus'],
-            input: ['packages/components/index.ts'],
+            input: ['packages/components/index.ts'], // 打包的时候入口文件
             output: [
               {
                 format: 'es',
