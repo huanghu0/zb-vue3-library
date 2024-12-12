@@ -44,6 +44,15 @@ demo-preview=../examples/ZbListTable/basic.vue
 | indexLabel       | 索引列的label,需要index为true                        | 否    | string         |       |
 | indexWidth       | 索引列的宽度,需要index为true                           | 否    | string         |       |
 
+#### 回调函数说明
+
+| 事件名                   | 说明     | 是否必填 | 事件回传参数        |
+| --------------------- | ------ | ---- | ------------- |
+| handleSizeChange      | 改变页码大小 | 否    | val（改变后的页码大小） |
+| handleCurrentChange   | 改变当前页码 | 否    | val（改变后的页码）   |
+| handleSelectionChange | 多选回调   | 否    | val（选中的值）     |
+| handleSortChange      | 排序     | 否    | val（排序方式）     |
+
 #### ColumnItem
 
 | 字段名                          | 说明                                    | 是否必填 | 参数类型              | 默认值 |
