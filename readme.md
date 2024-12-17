@@ -30,3 +30,7 @@ app.use(ZbUiInstall)
 ```js
 import { ListTable,SearchForm } from "zb-vue3-ui"
 ```
+
+# 使用文档
+
+https://huanghu0.github.io/zb-vue3-library/
