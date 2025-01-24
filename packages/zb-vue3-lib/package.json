@@ -7,7 +7,9 @@
   "types": "es/packages/components/index.d.ts",
   "peerDependencies": {
     "element-plus": "^2.8.3",
-    "vue": "^3.5.6"
+    "vue": "^3.5.6",
+    "echarts": "^5.6.0",
+    "lodash": "^4.17.21"
   },
   "files": [
     "es",

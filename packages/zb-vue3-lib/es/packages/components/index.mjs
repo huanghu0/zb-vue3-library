@@ -1,18 +1,20 @@
-import s from "./src/ListTable/index.vue.mjs";
-import l from "./src/SearchForm/index.vue.mjs";
-import e from "./src/SvgIcon/index.vue.mjs";
-const m = [s, l, e], r = (t) => ({
-  install: (o, p) => {
-    t.forEach((n) => {
-      let a = n.name || n.__name;
-      o.component(a, n);
+import a from "./src/ListTable/index.vue.mjs";
+import m from "./src/SearchForm/index.vue.mjs";
+import r from "./src/SvgIcon/index.vue.mjs";
+import e from "./src/echarts/index.vue.mjs";
+const l = [a, m, r, e], i = (t) => ({
+  install: (n, f) => {
+    t.forEach((o) => {
+      let s = o.name || o.__name;
+      n.component(s, o);
     });
   }
-}), i = r(m), _ = i.install;
+}), c = i(l), I = c.install;
 export {
-  s as ZbListTable,
-  l as ZbSearchForm,
-  e as ZbSvgIcon,
-  _ as ZbUiInstall,
-  i as default
+  e as ZbEchartsComponents,
+  a as ZbListTable,
+  m as ZbSearchForm,
+  r as ZbSvgIcon,
+  I as ZbUiInstall,
+  c as default
 };

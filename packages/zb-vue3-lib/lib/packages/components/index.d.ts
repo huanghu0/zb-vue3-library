@@ -6,5 +6,6 @@ export declare const ZbUiInstall: (app: App, options?: any) => void;
 export * from './src/ListTable';
 export * from './src/SearchForm';
 export * from './src/SvgIcon';
+export * from './src/echarts';
 export * from './types/index';
 export default installer;

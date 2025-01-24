@@ -42,6 +42,10 @@
     >
     </ZbSvgIcon>      
 
+    <div class="echarts-content">
+      <ZbEchartsComponents :opts="barEchartsOption"></ZbEchartsComponents>
+    </div>  
+
   </div>
 
 </template>
@@ -63,6 +67,22 @@ const pageOption = ref<PageOptionItem>(PageOption)
 const tableList = ref<ColumnItem[]>(TableList)
 
 const tableData = ref([{}])
+
+const barEchartsOption = ref({
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  },
+  yAxis: {
+    type: 'value'
+  },
+  series: [
+    {
+      data: [120, 200, 150, 80, 70, 110, 130],
+      type: 'bar'
+    }
+  ]
+})
 
 // 表格组件相关
 const tableOption = reactive({
@@ -95,4 +115,8 @@ const tableKey = ref(getUuid())
 </script>
 
 <style scoped>
+.echarts-content{
+  width: 600px;
+  height: 600px;
+}
 </style>
