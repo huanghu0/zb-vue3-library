@@ -45,11 +45,9 @@ export default defineConfig({
       md.use(componentPreview)
     }
   },  
-  // vite: {
-  //   resolve: {
-  //     alias: {
-  //       'zb-vue3-ui': '../../packages/components'
-  //     }
-  //   }
-  // }
+  vite: {
+    ssr:{
+      noExternal:['element-plus','zb-vue3-ui','@zb-vue3-ui/components']
+    }
+  }
 })

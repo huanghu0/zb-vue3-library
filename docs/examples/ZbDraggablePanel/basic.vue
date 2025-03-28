@@ -1,12 +1,14 @@
 <template>
     <div class="panel">
-      <ZbDraggablePanel :columns="columns">
-        <template v-for="item in columns" :key="item.id" #[item.id]>
-          <div>
-            {{ item.text }}
-          </div>
-        </template>
-      </ZbDraggablePanel>
+      <ClientOnly>
+        <ZbDraggablePanel :columns="columns">
+          <template v-for="item in columns" :key="item.id" #[item.id]>
+            <div>
+              {{ item.text }}
+            </div>
+          </template>
+        </ZbDraggablePanel>        
+      </ClientOnly>  
     </div>
 </template>
 
