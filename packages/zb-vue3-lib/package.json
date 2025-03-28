@@ -18,7 +18,10 @@
   "keywords": [
     "vue3",
     "components ui",
-    "element plus"
+    "element plus",
+    "echarts",
+    "左右拖拽面板",
+    "基于element plus业务组件库"
   ],
   "author": "huanghu",
   "license": "MIT",

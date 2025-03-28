@@ -46,6 +46,16 @@
       <ZbEchartsComponents :opts="barEchartsOption"></ZbEchartsComponents>
     </div>  
 
+    <div class="panel">
+      <ZbDraggablePanel :columns="columns">
+        <template v-for="item in columns" :key="item.id" #[item.id]>
+          <div>
+            {{ item.text }}
+          </div>
+        </template>
+      </ZbDraggablePanel>
+    </div>
+
   </div>
 
 </template>
@@ -112,11 +122,30 @@ const loading = ref(false)
 
 const tableKey = ref(getUuid())
 
+const columns = ref([{
+  id:'12',
+  text:'1'
+},{
+  id:'34',
+  text:'2'
+},{
+  id:'56',
+  text:'3'
+},{
+  id:'78',
+  text:'4'
+}
+]) 
+
 </script>
 
 <style scoped>
 .echarts-content{
   width: 600px;
   height: 600px;
+}
+.panel{
+  height: 600px;
+  width: 100%;
 }
 </style>

@@ -4,7 +4,7 @@
   "description": "a vue3 components ui lib based Element-plus",
   "private": true,
   "scripts": {
-    "dev": " cd start & pnpm run dev",
+    "dev": "cd start & pnpm run dev",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "build": "node build/index.js",

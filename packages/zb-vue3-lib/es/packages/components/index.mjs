@@ -1,20 +1,22 @@
-import a from "./src/ListTable/index.vue.mjs";
+import r from "./src/ListTable/index.vue.mjs";
 import m from "./src/SearchForm/index.vue.mjs";
-import r from "./src/SvgIcon/index.vue.mjs";
+import s from "./src/SvgIcon/index.vue.mjs";
 import e from "./src/echarts/index.vue.mjs";
-const l = [a, m, r, e], i = (t) => ({
+import l from "./src/DraggablePanel/index.vue.mjs";
+const i = [r, m, s, e, l], c = (t) => ({
   install: (n, f) => {
     t.forEach((o) => {
-      let s = o.name || o.__name;
-      n.component(s, o);
+      let a = o.name || o.__name;
+      n.component(a, o);
     });
   }
-}), c = i(l), I = c.install;
+}), p = c(i), u = p.install;
 export {
+  l as ZbDraggablePanel,
   e as ZbEchartsComponents,
-  a as ZbListTable,
+  r as ZbListTable,
   m as ZbSearchForm,
-  r as ZbSvgIcon,
-  I as ZbUiInstall,
-  c as default
+  s as ZbSvgIcon,
+  u as ZbUiInstall,
+  p as default
 };

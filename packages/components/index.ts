@@ -2,9 +2,10 @@ import { ZbListTable } from './src/ListTable'
 import { ZbSearchForm } from './src/SearchForm'
 import { ZbSvgIcon } from './src/SvgIcon'
 import {  ZbEchartsComponents } from './src/echarts'
+import {  ZbDraggablePanel } from './src/DraggablePanel'
 import type { App } from '@vue/runtime-core'
 
-const components = [ZbListTable,ZbSearchForm,ZbSvgIcon,ZbEchartsComponents]
+const components = [ZbListTable,ZbSearchForm,ZbSvgIcon,ZbEchartsComponents,ZbDraggablePanel]
 
 const makeInstaller = (comments:any) => {
     const install = (app:App,options?:any) => {
@@ -26,7 +27,10 @@ export * from './src/ListTable'
 export * from './src/SearchForm'
 export * from './src/SvgIcon'
 export * from './src/echarts'
+export * from './src/DraggablePanel'
+
 export * from './types/index'
+
 
 export default installer
 
