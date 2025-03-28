@@ -50,15 +50,15 @@ const startResize = (index, event) => {
   const nextStartWidth = props.columns[index + 1].width || 100;
 
   const resize = (e) => {
-    const newWidth = startWidth + (e.clientX - startX);
-    const nextNewWidth = nextStartWidth - (e.clientX - startX);
-    if(newWidth < 100){
-        newWidth = 100
-        nextNewWidth = nextNewWidth - (100 - newWidth)
-    }else if(nextNewWidth < 100){
-        nextNewWidth = 100
-        newWidth = newWidth - (100 - nextNewWidth)
-    }
+    let newWidth = startWidth + (e.clientX - startX);
+    let nextNewWidth = nextStartWidth - (e.clientX - startX);
+    // if(newWidth < 100){
+    //     newWidth = 100
+    //     nextNewWidth = nextNewWidth - (100 - newWidth)
+    // }else if(nextNewWidth < 100){
+    //     nextNewWidth = 100
+    //     newWidth = newWidth - (100 - nextNewWidth)
+    // }
     props.columns[index].width = Math.max(100, newWidth); // 最小宽度限制为100px
     props.columns[index + 1].width = Math.max(100, nextNewWidth);
   };
