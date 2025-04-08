@@ -1,9 +1,9 @@
-import { defineComponent as f, watch as v, openBlock as r, createElementBlock as d, Fragment as g, renderList as _, normalizeStyle as u, createElementVNode as y, renderSlot as b, createCommentVNode as E } from "vue";
+import { defineComponent as E, watch as f, onMounted as b, onUnmounted as _, openBlock as l, createElementBlock as r, Fragment as y, renderList as z, normalizeStyle as w, createElementVNode as L, renderSlot as W, createCommentVNode as M } from "vue";
 /* empty css            */
-import z from "../../../../_virtual/_plugin-vue_export-helper.mjs";
-const L = { class: "draggable-panel" }, W = ["onMousedown"], k = f({
+import S from "../../../../_virtual/_plugin-vue_export-helper.mjs";
+const k = { class: "draggable-panel" }, q = ["onMousedown"], x = E({
   name: "ZbDraggablePanel"
-}), x = /* @__PURE__ */ Object.assign(k, {
+}), X = /* @__PURE__ */ Object.assign(x, {
   props: {
     columns: {
       type: Array,
@@ -11,50 +11,68 @@ const L = { class: "draggable-panel" }, W = ["onMousedown"], k = f({
       default: []
     }
   },
-  setup(c) {
-    const n = c;
-    v(
+  setup(d) {
+    const n = d;
+    f(
       () => n.columns.length,
-      (t) => {
+      (e) => {
         setTimeout(() => {
           let o = document.querySelector(".draggable-panel").clientWidth;
-          n.columns.forEach((e) => {
-            e.width = o / t;
+          n.columns.forEach((t) => {
+            t.width = o / e;
           });
         }, 200);
       },
       { immediate: !0, deep: !0 }
     );
-    const h = (t, o) => {
-      const e = o.clientX, s = n.columns[t].width || 100, l = n.columns[t + 1].width || 100, a = (m) => {
-        let p = s + (m.clientX - e), w = l - (m.clientX - e);
-        n.columns[t].width = Math.max(100, p), n.columns[t + 1].width = Math.max(100, w);
-      }, i = () => {
-        document.removeEventListener("mousemove", a), document.removeEventListener("mouseup", i);
+    const p = (e, o) => {
+      const t = o.clientX, s = n.columns[e].width || 100, c = n.columns[e + 1].width || 100, u = (h) => {
+        let v = s + (h.clientX - t), g = c - (h.clientX - t);
+        n.columns[e].width = Math.max(100, v), n.columns[e + 1].width = Math.max(100, g);
+      }, m = () => {
+        document.removeEventListener("mousemove", u), document.removeEventListener("mouseup", m);
       };
-      document.addEventListener("mousemove", a), document.addEventListener("mouseup", i);
+      document.addEventListener("mousemove", u), document.addEventListener("mouseup", m);
+    }, i = (e) => {
+      setTimeout(() => {
+        let o = document.querySelector(".draggable-panel").scrollWidth;
+        n.columns.forEach((t) => {
+          t.width = o / n.columns.length;
+        });
+      }, 200);
+    }, a = () => {
+      console.log("resize"), setTimeout(() => {
+        let e = document.querySelector(".draggable-panel").scrollWidth;
+        n.columns.forEach((o) => {
+          o.width = e / n.columns.length;
+        });
+      }, 200);
     };
-    return (t, o) => (r(), d("div", L, [
-      (r(!0), d(g, null, _(c.columns, (e, s) => (r(), d("div", {
-        key: e.id,
+    return b(() => {
+      document.addEventListener("wheel", i), window.addEventListener("resize", a);
+    }), _(() => {
+      document.removeEventListener("wheel", i), window.removeEventListener("resize", a);
+    }), (e, o) => (l(), r("div", k, [
+      (l(!0), r(y, null, z(d.columns, (t, s) => (l(), r("div", {
+        key: t.id,
         class: "column",
-        style: u({ width: e.width + "px" })
+        style: w({ width: t.width + "px" })
       }, [
-        y("div", {
+        L("div", {
           class: "content",
-          style: u({ width: e.width - 8 + "px" })
+          style: w({ width: t.width - 8 + "px" })
         }, [
-          b(t.$slots, e.id, {}, void 0, !0)
+          W(e.$slots, t.id, {}, void 0, !0)
         ], 4),
-        s !== c.columns.length - 1 ? (r(), d("div", {
+        s !== d.columns.length - 1 ? (l(), r("div", {
           key: 0,
           class: "resizer",
-          onMousedown: (l) => h(s, l)
-        }, null, 40, W)) : E("", !0)
+          onMousedown: (c) => p(s, c)
+        }, null, 40, q)) : M("", !0)
       ], 4))), 128))
     ]));
   }
-}), N = /* @__PURE__ */ z(x, [["__scopeId", "data-v-d903fff9"]]);
+}), B = /* @__PURE__ */ S(X, [["__scopeId", "data-v-b356be9e"]]);
 export {
-  N as default
+  B as default
 };

@@ -17,7 +17,7 @@
 </template>
 
 <script name="ZbDraggablePanel" setup>
-import { onUpdated, ref,watch,nextTick } from 'vue';
+import { ref,watch,nextTick, onMounted,onUnmounted } from 'vue';
 
 
 
@@ -72,6 +72,34 @@ const startResize = (index, event) => {
   document.addEventListener('mouseup', stopResize);
 };
 
+const handleMouseWheel = (event) => {
+  setTimeout(() => {
+      let width = document.querySelector('.draggable-panel').scrollWidth; 
+      props.columns.forEach((column) => {
+          column.width = width / props.columns.length;
+      });
+  },200)  
+};
+
+const handleResize = () => {
+  console.log('resize')
+  setTimeout(() => {
+      let width = document.querySelector('.draggable-panel').scrollWidth; 
+      props.columns.forEach((column) => {
+          column.width = width / props.columns.length;
+      });
+  },200)   
+}
+
+onMounted(() => {
+  document.addEventListener('wheel', handleMouseWheel);
+  window.addEventListener('resize', handleResize);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('wheel', handleMouseWheel);
+  window.removeEventListener('resize', handleResize);
+});
 
 </script>
 

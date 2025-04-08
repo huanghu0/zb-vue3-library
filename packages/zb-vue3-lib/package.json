@@ -1,6 +1,6 @@
 {
   "name": "zb-vue3-ui",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "a components ui lib based on element-plus",
   "main": "lib/packages/components/index.js",
   "module": "es/packages/components/index.mjs",
