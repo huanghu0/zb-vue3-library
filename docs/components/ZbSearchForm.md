@@ -10,6 +10,36 @@
 demo-preview=../examples/ZbSearchForm/basic.vue
 :::
 
+```vue
+// autocomponent
+<template>
+    <el-radio-group v-model="searchParam[field]">
+      <el-radio :value="1" size="small">1</el-radio>
+      <el-radio :value="2" size="small">2</el-radio>
+    </el-radio-group>
+</template>
+
+<script setup>
+const props = defineProps({
+  searchParam: {
+    type: Object,
+    required: true
+  },
+  field: {
+    type:Number,
+    required:true
+  },
+}) 
+
+
+</script>
+<style lang="scss">
+    
+</style>
+```
+
+
+
 ## 传参说明
 
 ### props传参
@@ -35,29 +65,30 @@ demo-preview=../examples/ZbSearchForm/basic.vue
 
 ### SearchItem参数说明
 
-| 参数名            | 说明                                                   | 是否必填 | 参数类型                                     | 可用值                                           | 默认值 |
-| -------------- | ---------------------------------------------------- | ---- | ---------------------------------------- | --------------------------------------------- | --- |
-| label          | 字段中文                                                 | 是    | string                                   |                                               |     |
-| prop           | 字段                                                   | 是    | string                                   |                                               |     |
-| multiple       | 是否为多选,选择的时候用到的属性                                     | 否    | boolean                                  |                                               |     |
-| type           | 组件的类型                                                | 是    | string                                   | el-select,el-input,el-date-picker,el-cascader |     |
-| options        | 选择组件的选项数组                                            | 否    | Array<{label,value,..}>                  |                                               |     |
-| defaultOptions | 选择组件的默认值选项数组，只有filterable为true，才需要这个，用来存初始值筛选过滤用     | 否    | Array<{label,value,..}>                  |                                               |     |
-| required       | 是否必填                                                 | 否    | boolean                                  |                                               |     |
-| placeholder    | 组件内部说明                                               | 否    | string                                   |                                               |     |
-| width          | 组件宽度                                                 | 否    | string                                   |                                               |     |
-| filterable     | 是否可以筛选                                               | 否    | string                                   |                                               |     |
-| filterKey      | 只有filterable为true，才需要这个，用来判断过滤需要匹配哪几个对象里的key         | 否    | string[]                                 |                                               |     |
-| isShow         | 某item出现的前置条件，第一个元素一般是前置条件字段,第二个元素是一个数组,表示前置条件满足的值才出现 | 否    | Array                                    |                                               |     |
-| isShowFunc     | 某item出现的前置函数,搜索条件的前置可以通过自定义的函数来判断,                   | 否    | Function(searchParam),searchParam是整个表单的值 |                                               |     |
-| shortcuts      | 日期选择器上使用，快捷日期                                        | 否    | 同el-date-picker上的shortcuts               |                                               |     |
-| dataType       | 日期选择器的类型                                             | 否    | 同el-date-picker上的type                    |                                               |     |
-| enterKeyEvent  | 是否支持直接enter搜索                                        | 否    | boolean                                  |                                               |     |
-| notTrim        | 是否不去掉文本前后的空格，el-input上用                              | 否    | boolean                                  |                                               |     |
-| showAllLevels  | 级联选择使用，是否展示所有的层                                      | 否    | boolean                                  |                                               |     |
-| filterMethod   | 级联选择自定义搜索方法,filter-method                            | 否    | Function                                 |                                               |     |
-| clearable      | 是否可清空,el-select                                      | 否    | boolean                                  |                                               |     |
-| format         | 时间类型展示样式                                             | 否    | string                                   | 同el-date-picker                               |     |
-| valueFormat    | 时间对应值的展示样式                                           | 否    | string                                   | 同el-date-picker                               |     |
-| cascaderProps  | 级联类型的props,el-cascader                               | 否    | obj，同el-cascader的props                   |                                               |     |
-| tooltip        | tooltip的内容,有这个字段则有tooltip                            | 否    | string                                   |                                               |     |
+| 参数名            | 说明                                                   | 是否必填 | 参数类型                                     | 可用值                                                         | 默认值 |
+| -------------- | ---------------------------------------------------- | ---- | ---------------------------------------- | ----------------------------------------------------------- | --- |
+| label          | 字段中文                                                 | 是    | string                                   |                                                             |     |
+| prop           | 字段                                                   | 是    | string                                   |                                                             |     |
+| multiple       | 是否为多选,选择的时候用到的属性                                     | 否    | boolean                                  |                                                             |     |
+| type           | 组件的类型                                                | 是    | string                                   | el-select,el-input,el-date-picker,el-cascader，autocomponent |     |
+| options        | 选择组件的选项数组                                            | 否    | Array<{label,value,..}>                  |                                                             |     |
+| defaultOptions | 选择组件的默认值选项数组，只有filterable为true，才需要这个，用来存初始值筛选过滤用     | 否    | Array<{label,value,..}>                  |                                                             |     |
+| required       | 是否必填                                                 | 否    | boolean                                  |                                                             |     |
+| placeholder    | 组件内部说明                                               | 否    | string                                   |                                                             |     |
+| width          | 组件宽度                                                 | 否    | string                                   |                                                             |     |
+| filterable     | 是否可以筛选                                               | 否    | string                                   |                                                             |     |
+| filterKey      | 只有filterable为true，才需要这个，用来判断过滤需要匹配哪几个对象里的key         | 否    | string[]                                 |                                                             |     |
+| isShow         | 某item出现的前置条件，第一个元素一般是前置条件字段,第二个元素是一个数组,表示前置条件满足的值才出现 | 否    | Array                                    |                                                             |     |
+| isShowFunc     | 某item出现的前置函数,搜索条件的前置可以通过自定义的函数来判断,                   | 否    | Function(searchParam),searchParam是整个表单的值 |                                                             |     |
+| shortcuts      | 日期选择器上使用，快捷日期                                        | 否    | 同el-date-picker上的shortcuts               |                                                             |     |
+| dataType       | 日期选择器的类型                                             | 否    | 同el-date-picker上的type                    |                                                             |     |
+| enterKeyEvent  | 是否支持直接enter搜索                                        | 否    | boolean                                  |                                                             |     |
+| notTrim        | 是否不去掉文本前后的空格，el-input上用                              | 否    | boolean                                  |                                                             |     |
+| showAllLevels  | 级联选择使用，是否展示所有的层                                      | 否    | boolean                                  |                                                             |     |
+| filterMethod   | 级联选择自定义搜索方法,filter-method                            | 否    | Function                                 |                                                             |     |
+| clearable      | 是否可清空,el-select                                      | 否    | boolean                                  |                                                             |     |
+| format         | 时间类型展示样式                                             | 否    | string                                   | 同el-date-picker                                             |     |
+| valueFormat    | 时间对应值的展示样式                                           | 否    | string                                   | 同el-date-picker                                             |     |
+| cascaderProps  | 级联类型的props,el-cascader                               | 否    | obj，同el-cascader的props                   |                                                             |     |
+| tooltip        | tooltip的内容,有这个字段则有tooltip                            | 否    | string                                   |                                                             |     |
+| component      | type为autocomponent时使用                                | 否    | Element                                  |                                                             |     |

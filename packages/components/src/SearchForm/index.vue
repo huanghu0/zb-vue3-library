@@ -100,6 +100,9 @@
                         v-model="searchParam[item.prop]"
                     ></el-cascader>
                 </template>
+                <template v-if="item.type === 'autocomponent'">
+                    <component :is="item.component" :searchParam="searchParam" :field="item.prop"></component>
+                </template>  
             </el-form-item>
         </el-form>
     </div>

@@ -1,3 +1,4 @@
+import autocomponent from '../autocomponent.vue'
 export const SearchList = [
     {
         label: 'ID',
@@ -19,13 +20,20 @@ export const SearchList = [
         options:[],
         filterable: true,
         filterKey: ['label', 'value'],
-    }
+    },
+    {
+        label:'自定义',
+        prop:'autoValue',
+        type:'autocomponent',
+        component:autocomponent,
+    }    
 ]
 
 export const SearchParam = {
     id: '',
     dataSetName: '',
-    type: ''
+    type: '',
+    autoValue:''
 }
 
 export const PageOption = {

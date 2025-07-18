@@ -23,6 +23,7 @@
 <script setup lang="ts">
 import { reactive, ref } from "vue"
 import type { SearchItem } from "zb-vue3-ui"
+import autocomponent from './autocomponent.vue'
 
 const SearchList = [
     {
@@ -45,13 +46,20 @@ const SearchList = [
         options:[],
         filterable: true,
         filterKey: ['label', 'value'],
-    }
+    },
+    {
+        label:'自定义',
+        prop:'autoValue',
+        type:'autocomponent',
+        component:autocomponent,
+    }     
 ]
 
 const SearchParam = {
     id: '',
     name: '',
-    type: ''
+    type: '',
+    autoValue:''    
 }
 
 
@@ -66,7 +74,8 @@ function reset(){
   searchParam.value = {
     id: '',
     name: '',
-    type: ''    
+    type: '',
+    autoValue:''       
   }
 }
 
